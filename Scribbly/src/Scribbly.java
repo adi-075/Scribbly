@@ -8,6 +8,7 @@ public class Scribbly extends Frame {
         super("Scribbly v0.1 ");
         status = new Label("Scribbly has started...");
         add(status,BorderLayout.SOUTH);
+        setBackground(Color.BLACK);
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -21,6 +22,7 @@ public class Scribbly extends Frame {
             public void mouseDragged(MouseEvent e) {
                 //super.mouseDragged(e);
                 Graphics g = getGraphics();
+                g.setColor(Color.WHITE);
                 g.drawLine(x,y,e.getX(),e.getY());
                 x=e.getX();  y = e.getY();
             }
