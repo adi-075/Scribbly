@@ -1,12 +1,13 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class ScribblePad extends Frame {
+public class Scribbly extends Frame {
     Label status;
     int x,y;
-    ScribblePad(){
-        super("Scribble Pad v0.1 ");
-        status = new Label("Scribble Pad started...");
+    Scribbly(){
+        super("Scribbly v0.1 ");
+        status = new Label("Scribbly has started...");
+        add(status,BorderLayout.SOUTH);
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -39,6 +40,6 @@ public class ScribblePad extends Frame {
 
 
     public static void main(String args[]){
-        new ScribblePad();
+        new Scribbly();
     }
 }
